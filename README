@@ -1,0 +1,49 @@
+This README file contains information on the contents of the meta-weston-remote layer.
+
+Please see the corresponding sections below for details.
+
+Dependencies
+============
+
+  URI: <first dependency>
+  branch: <branch name>
+
+  URI: <second dependency>
+  branch: <branch name>
+
+  .
+  .
+  .
+
+Patches
+=======
+
+Please submit any patches against the meta-weston-remote layer to the xxxx mailing list (xxxx@zzzz.org)
+and cc: the maintainer:
+
+Maintainer: Ron Munitz <ron@thepscg.com>
+
+Table of Contents
+=================
+
+  I. Adding the meta-weston-remote layer to your build
+ II. Misc
+
+
+I. Adding the meta-weston-remote layer to your build
+=================================================
+
+Run 'bitbake-layers add-layer meta-weston-remote'
+
+II. Misc
+========
+Video: https://www.youtube.com/watch?v=IGakHmf-aBA&list=PLBaH8x4hthVysdRTOlg2_8hL6CWCnN5l-&index=95
+
+For tlsstuff creation, and replacing it with your own materials, see:
+* https://github.com/ronpscg/vnc-rdp-pki-creation-for-weston
+	* There is a video explaining it more details in https://www.youtube.com/watch?v=ZB7tkViEzbc&list=PLBaH8x4hthVysdRTOlg2_8hL6CWCnN5l-&index=92
+  
+The relevant videos, and context to this layer and distro are in youtube as well, before and after the playlist mentioned above.
+
+
+Please note the git log - it explains what are the configuration changes done (e.g. to weston.ini) and how to modify your wifi password, should you want to include the wifi quick connect hack (and then you would want to add the recipe to local.conf - or use the example distro)
