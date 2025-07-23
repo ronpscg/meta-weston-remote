@@ -1,0 +1,5 @@
+network={
+	ssid="mytestnetwork"
+	#psk="mytestpassword"
+	psk=12b9e6f0e2a5f5386a68bbebd2e13b05403bca8ad5c2c4ecc59de0da765c510e
+}
