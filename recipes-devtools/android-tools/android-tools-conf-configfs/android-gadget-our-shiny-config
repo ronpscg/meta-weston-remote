@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# ADB
+echo "RonMunitz" > /sys/kernel/config/usb_gadget/adb/strings/0x409/serialnumber
+
+# USB Product (if the productId is not something well recognized)
+echo "The PSCG super amazing device" > /sys/kernel/config/usb_gadget/adb/strings/0x409/product
+echo "The PSCG" > /sys/kernel/config/usb_gadget/adb/strings/0x409/manufacturer
+
+# idVendor:idProduct
+echo 0x9999 > /sys/kernel/config/usb_gadget/adb/idProduct 
+echo 0xacdc > /sys/kernel/config/usb_gadget/adb/idVendor
+
