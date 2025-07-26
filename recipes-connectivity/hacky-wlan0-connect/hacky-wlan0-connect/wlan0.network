@@ -1,0 +1,11 @@
+[Match]
+Name=wlan*
+
+[Network]
+DHCP=v4
+
+[DHCPv4]
+# This will have the same behavior of udhcpc
+ClientIdentifier=mac
+UseHostname=false
+
