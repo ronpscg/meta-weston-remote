@@ -7,11 +7,15 @@ do_install:append() {
     if [ "${VIRTUAL-RUNTIME_init_manager}" != "systemd" ]; then
         install -D -m0755 ${UNPACKDIR}/start-adbd.sh ${D}/${sysconfdir}/init.d/start-adbd.sh
     else
-        echo "Warning: systemd is not supported by this example - but it is very easy to add it"
+        # The right way to do things is with install. Below is a demonstration of the fact that any shell command can work here
+        mkdir ${D}/${sysconfdir}
+        touch ${D}/${sysconfdir}/usb-debugging-enabled
     fi
 }
 
 FILES:${PN}-adbd:append = " ${sysconfdir}/init.d/start-adbd.sh"
+
+FILES:${PN}-adbd:append:systemd = " /etc/usb-debugging-enabled"
 
 pkg_postinst_ontarget:${PN}-adbd() {
     update-rc.d start-adbd.sh start 51 2 5 .
